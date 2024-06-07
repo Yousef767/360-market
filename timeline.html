@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--favicon-->
+  <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+  <!--plugins-->
+  <link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+  <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+  <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+  <link href="assets/css/app.css" rel="stylesheet">
+  <link href="assets/css/icons.css" rel="stylesheet">
+  <!-- Theme Style CSS -->
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+  <link rel="stylesheet" href="assets/scss/style.css" />
+  <title>360 Market</title>
+</head>
+
+<body>
+  <!--wrapper-->
+  <div class="wrapper">
+    <!--sidebar wrapper -->
+    <div class="sidebar-wrapper" data-simplebar="true">
+    </div>
+    <!--end sidebar wrapper -->    
+    <!--start header -->
+    <nav class="nav">
+      <div class="logo">
+        <i class="fa-regular fa-angles-left toggle-icon"></i>
+        <img src="assets/images/logo-img.png" alt="">
+        <i class="fa-regular fa-bars menu"></i>
+        <span>360 Market</span>
+      </div>
+      <div class="user-box dropdown px-3">
+        <a class="d-flex align-items-center nav-link dropdown-toggle gap-3 dropdown-toggle-nocaret" href="#"
+          role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="assets/images/avatars/avatar-1.png" class="user-img" alt="user avatar">
+          <div class="user-info">
+            <p class="user-name mb-0">User Name</p>
+            <p class="designattion mb-0">Jop Title</p>
+          </div>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                class="bx bx-user fs-5"></i><span>Profile</span></a>
+          </li>
+          <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                class="bx bx-cog fs-5"></i><span>Settings</span></a>
+          </li>
+          <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                class="bx bx-home-circle fs-5"></i><span>Dashboard</span></a>
+          </li>
+          <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                class="bx bx-dollar-circle fs-5"></i><span>Earnings</span></a>
+          </li>
+          <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                class="bx bx-download fs-5"></i><span>Downloads</span></a>
+          </li>
+          <li>
+            <div class="dropdown-divider mb-0"></div>
+          </li>
+          <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                class="bx bx-log-out-circle"></i><span>Logout</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--End header -->
+    <!--Start page wrapper -->
+    <div class="page-wrapper">
+      <div class="page-content">
+        <div class="card">
+          <form class="card-body d-flex flex-direction-column gap-3">
+            <h5 class="d-flex gap-1 align-items-center">Filter <i class="fa-regular fa-filter"></i></h5>
+            <div class="inputs">
+              <div class="input">
+                <span>Visitor Name </span>
+                <input type="text" placeholder="Visitor Name ">
+              </div>
+              <div class="input">
+                <span>Customer Name  </span>
+                <select name="" id="">
+                  <option value="0">Select Clients</option>
+                </select>
+              </div>
+              <div class="input">
+                <span>Governrate</span>
+                <input type="text" placeholder="Governrate">
+              </div>
+              <div class="input">
+                <span>Area</span>
+                <select name="" id="">
+                  <option value="0">Select Regions</option>
+                </select>
+              </div>
+              <div class="input">
+                <span>Select Date</span>
+                <input type="date" placeholder="Select Date">
+              </div>
+              <div class="input">
+                <span>Client Chains</span>
+                <select name="" id="">
+                  <option value="0">Select Client Chains</option>
+                </select>
+              </div>
+            </div>
+            <button class="btnApply"> APPLY </button>
+          </form>
+        </div>
+        <div class="row w-100 d-flex m0a">
+          <div class="timelineCont">
+            <div class="head">
+              <h4>Timeline</h4>
+              <span>A complete list of every step taken</span>
+            </div>
+            <div class="timeLineEvent" id="event150">
+              <div class="gr bb1 pb10 gap-2 flex-wrap-wrap">
+                <div class="userData">
+                  <img src="assets/images/avatars/avatar-1.png" alt="">
+                  <div class="userT">
+                    <p>User Name</p>
+                    <span>Sunday,March 17th 2024,02 13 02 PM <span><i class="fa-solid fa-location-dot"></i> سوبر ماركت
+                        البركة مكة</span></span>
+                  </div>
+                </div>
+                <div class="timer">
+                  <span class=" d-flex gap-1 align-items-center"><i class="fa-regular fa-timer"></i>Total Time</span>
+                  <h5><span>00</span>:<span>16</span>:<span>32</span></h5>
+                </div>
+              </div>
+              <div class="sectionsFilt bb2">
+                <div class="filt activeFilt" onclick="showNotes(this,'event150')">Notes</div>
+                <div class="filt" onclick="showPhotos(this,'event150')">Photos</div>
+                <div class="filt" onclick="showAudits(this,'event150')">Form</div>
+              </div>
+              <div class="media w-100">
+                <div class="mediaInner notesMedia">
+                  <div class="frameInner">
+                    <img class="viwerBtn" onclick="showImg(this)" src="assets/images/gallery/01.png" alt="">
+                    <i class="fa-solid fa-note"></i>
+                  </div>
+                </div>
+                <div class="mediaInner photosMedia">
+                  <div class="frameInner">
+                    <img class="viwerBtn" onclick="showImg(this)" src="assets/images/gallery/02.png" alt="">
+                    <i class="fa-solid fa-image"></i>
+                  </div>
+                </div>
+                <div class="mediaInner auditsMedia">
+                  <div class="frameInner">
+                    <img class="viwerBtn" onclick="showImg(this)" src="assets/images/gallery/03.png" alt="">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 lastD">
+                Sunday,March 17th 2024,02 30 02 PM
+              </div>
+            </div>
+            <div class="timeLineEvent" id="event250">
+              <div class="gr bb1 pb10 gap-2 flex-wrap-wrap">
+                <div class="userData">
+                  <img src="assets/images/avatars/avatar-1.png" alt="">
+                  <div class="userT">
+                    <p>User Name</p>
+                    <span>Sunday,March 17th 2024,02 13 02 PM <span><i class="fa-solid fa-location-dot"></i> سوبر ماركت
+                        البركة مكة</span></span>
+                  </div>
+                </div>
+                <div class="timer">
+                  <span class=" d-flex gap-1 align-items-center"><i class="fa-regular fa-timer"></i>Total Time</span>
+                  <h5><span>00</span>:<span>16</span>:<span>32</span></h5>
+                </div>
+              </div>
+              <div class="sectionsFilt bb2">
+                <div class="filt activeFilt" onclick="showNotes(this,'event250')">Notes</div>
+                <div class="filt" onclick="showPhotos(this,'event250')">Photos</div>
+                <div class="filt" onclick="showAudits(this,'event250')">Form</div>
+              </div>
+              <div class="media w-100">
+                <div class="mediaInner notesMedia">
+                  <div class="frameInner">
+                    <img class="viwerBtn" onclick="showImg(this)" src="assets/images/gallery/01.png" alt="">
+                    <i class="fa-solid fa-note"></i>
+                  </div>
+                </div>
+                <div class="mediaInner photosMedia">
+                  <div class="frameInner">
+                    <img class="viwerBtn" onclick="showImg(this)" src="assets/images/gallery/02.png" alt="">
+                    <i class="fa-solid fa-image"></i>
+                  </div>
+                </div>
+                <div class="mediaInner auditsMedia">
+                  <div class="frameInner">
+                    <img class="viwerBtn" onclick="showImg(this)" src="assets/images/gallery/03.png" alt="">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 lastD">
+                Sunday,March 17th 2024,02 30 02 PM
+              </div>
+            </div>
+            <div class="timeLineEvent" id="event350">
+              <div class="gr bb1 pb10 gap-2 flex-wrap-wrap">
+                <div class="userData">
+                  <img src="assets/images/avatars/avatar-1.png" alt="">
+                  <div class="userT">
+                    <p>User Name</p>
+                    <span>Sunday,March 17th 2024,02 13 02 PM <span><i class="fa-solid fa-location-dot"></i> سوبر ماركت
+                        البركة مكة</span></span>
+                  </div>
+                </div>
+                <div class="timer">
+                  <span class=" d-flex gap-1 align-items-center"><i class="fa-regular fa-timer"></i>Total Time</span>
+                  <h5><span>00</span>:<span>16</span>:<span>32</span></h5>
+                </div>
+              </div>
+              <div class="sectionsFilt bb2">
+                <div class="filt activeFilt" onclick="showNotes(this,'event350')">Notes</div>
+                <div class="filt" onclick="showPhotos(this,'event350')">Photos</div>
+                <div class="filt" onclick="showAudits(this,'event350')">Form</div>
+              </div>
+              <div class="media w-100">
+                <div class="mediaInner notesMedia">
+                  <div class="frameInner">
+                    <img class="viwerBtn" onclick="showImg(this)" src="assets/images/gallery/01.png" alt="">
+                    <i class="fa-solid fa-note"></i>
+                  </div>
+                </div>
+                <div class="mediaInner photosMedia">
+                  <div class="frameInner">
+                    <img class="viwerBtn" onclick="showImg(this)" src="assets/images/gallery/02.png" alt="">
+                    <i class="fa-solid fa-image"></i>
+                  </div>
+                </div>
+                <div class="mediaInner auditsMedia">
+                  <div class="frameInner">
+                    <img class="viwerBtn" onclick="showImg(this)" src="assets/images/gallery/03.png" alt="">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 lastD">
+                Sunday,March 17th 2024,02 30 02 PM
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end page wrapper -->
+
+
+    <!-- Start Pop up -->
+    <div class="opoUp" id="popInner">
+      <div class="ImgCont">
+        <i class="fa-regular fa-xmark" id="close"></i>
+        <img src="" alt="" id="imgSrc">
+      </div>
+    </div>
+    <!-- End Pop up -->
+
+
+    <!--Start Back To Top Button-->
+    <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+    <!--End Back To Top Button-->
+    <footer class="page-footer">
+      <p class="mb-0">Copyright © 2022. All right reserved.</p>
+    </footer>
+  </div>
+  <!--end wrapper-->
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!--plugins-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+  <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+  <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+  <script src="assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+  <script src="assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="assets/plugins/chartjs/js/chart.js"></script>
+  <script src="assets/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
+  <!--Morris JavaScript -->
+  <script src="assets/plugins/raphael/raphael-min.js"></script>
+  <script src="assets/plugins/morris/js/morris.js"></script>
+
+  <!--app JS-->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/show.js"></script>
+  <script src="assets/js/header.js"></script>
+</body>
+
+</html>
